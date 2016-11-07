@@ -19,9 +19,10 @@
       </h1>
 
       <p>
-        <a href="hello#index">home</a> |
-        <a href="hello#about">about</a> |
-        <a href="http://www.crisjr.eng.br/work">portfolio</a>
+        <!-- <a href="hello#index">home</a> | -->
+        <%= link_to 'home', controller: 'hello', action: 'index' %> |
+        <%= link_to 'about', controller: 'hello', action: 'about' %> |
+        <%= link_to 'portfolio', controller: 'hello', action: 'work' %> |
       </p>
   </div>
 
