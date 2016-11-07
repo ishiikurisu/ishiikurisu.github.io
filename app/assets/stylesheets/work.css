@@ -1,5 +1,5 @@
 div#block-p2 {
-  background-image: image-url('protolize.png');
+  background-image: url('protolize.png'); /* use image-url(...) in a *.cscc file */
   color: #111;
 }
 #block-p2 a:link,
