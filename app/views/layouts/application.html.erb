@@ -1,12 +1,29 @@
-<!DOCTYPE html>
 <html>
 <head>
-  <title>CrisjrEngBr</title>
+  <meta charset="utf-8">
+  <title>Hello!</title>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Pompiere' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link>
 </head>
+
 <body>
+
+  <div id="header">
+      <h1>
+        <img src="https://41.media.tumblr.com/a463afafa22e1c608471d0e85d0b8d09/tumblr_o14acmdzeu1ttpfgfo1_540.png" style="width:48px;"></img>
+        Cris Silva Jr
+      </h1>
+
+      <p>
+        <a href="hello#index">home</a> |
+        <a href="hello#about">about</a> |
+        <a href="http://www.crisjr.eng.br/work">portfolio</a>
+      </p>
+  </div>
 
 <%= yield %>
 

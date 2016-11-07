@@ -13,3 +13,29 @@
  *= require_tree .
  *= require_self
  */
+ body {
+   font-family: 'Pompiere', 'Oxygen', sans-serif;
+   font-size: 30px;
+   text-align: center;
+   background: #111;
+   color: #EEE;
+   text-decoration: none;
+   padding: 10px;
+ }
+
+ a:link {
+   color: #EEE;
+   text-decoration: none;
+ }
+
+ a:visited {
+   color: #EEE;
+ }
+
+ a:hover {
+   text-decoration: underline;
+ }
+
+ div.work {
+   background: #123456;
+ }
