@@ -23,6 +23,12 @@
    padding: 10px;
  }
 
+ #logo {
+      width: 48px;
+      height: 48px;
+      background-image: url('logo.png');
+ }
+
  a:link {
    color: #EEE;
    text-decoration: none;
