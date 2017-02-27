@@ -13,21 +13,6 @@ div#block-p2 {
   text-decoration: underline;
 }
 
-div#block-sst {
-    background-image: image-url('SST.png');
-    color: #0957C3;
-}
-#block-sst a:link,
-#block-sst a:visited {
-    color: #0957C3;
-    text-decoration: none;
-}
-
-#block-sst a:hover {
-    color: #0957C3;
-    text-decoration: underline;
-}
-
 div#block-sm {
     background: image-url('scalemate.png');
     color: #111;
@@ -43,37 +28,6 @@ div#block-sm {
     text-decoration: underline;
 }
 
-div#block-braile {
-  background: image-url('senses.jpg');
-  color: #D8402F;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-}
-#block-braile a:link,
-#block-braile a:visited {
-  color: #D8402F;
-  text-decoration: none;
-}
-
-#block-braile a:hover {
-  color: #D8402F;
-  text-decoration: underline;
-}
-
-div#block-partiu {
-  background-image: image-url('partiu.png');
-  color: #A3428F;
-}
-#block-partiu a:link,
-#block-partiu a:visited {
-  color: #A3428F;
-  text-decoration: none;
-}
-#block-partiu a:hover {
-  color: #A3428F;
-  text-decoration: underline;
-}
-
 div#block-sheep {
   background-image: image-url('counter.png');
 }
@@ -85,4 +39,32 @@ div#block-sheep {
 #block-sheep a:hover {
   color: #eee;
   text-decoration: underline;
+}
+
+div#block-logey {
+  background: #FDEB6C;
+  font-family: 'Fredoka One', cursive;
+  color:#9BC53D;
+  a:link, a:visited {
+    text-decoration: none;
+    color:#9BC53D;
+  }
+  a:hover {
+    text-decoration: underline;
+    color:#9BC53D;
+  }
+}
+
+div#block-edf{
+    background: #FFF;
+    font-family: sans-serif;
+    color:#000;
+    a:link, a:visited {
+        text-decoration: underline;
+        color:#000;
+    }
+    a:hover {
+        text-decoration: underline;
+        color:#000;
+    }
 }
