@@ -1,0 +1,22 @@
+%html
+%head
+    %title Hello!
+    %meta{:charset => 'utf-8'}
+    %link{:href => "https://fonts.googleapis.com/css?family=Oxygen", :rel => 'stylesheet', :type => 'text/css'}
+    %link{:href => 'https://fonts.googleapis.com/css?family=Pompiere', :rel => 'stylesheet', :type => 'text/css'}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+%body
+    %div{:id => 'header'}
+        %h1
+            %img{:class => 'logo'}
+            Cris Silva Jr.
+        %p
+            = link_to 'about', controller: 'hello', action: 'about'
+            |
+            = link_to 'office', controller: 'hello', action: 'work'
+            |
+            = link_to 'garage', controller: 'hello', action: 'garage'
+
+    = yield
