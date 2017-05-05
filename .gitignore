@@ -13,3 +13,6 @@
 /tmp
 *.db
 *.exe
+
+# Trying to config Unicorn
+/shared/*
