@@ -1,9 +1,0 @@
-{
-    "edit": {
-        "editor": "atom"
-    },
-    "build": {
-        "local": true,
-        "command": "rails server"
-    }
-}
