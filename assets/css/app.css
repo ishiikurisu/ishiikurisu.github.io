@@ -285,3 +285,41 @@ a.pure-button-primary {
         font-size: 300%;
     }
 }
+
+/*
+ * CRIS STUFFs
+ */
+.joe-link:link {
+    text-decoration: none;
+    color: #100007;
+}
+
+.joe-link:visited {
+    text-decoration: none;
+    color: #100007;
+}
+
+.joe-link:hover {
+    text-decoration: underline;
+    color: #100007;
+}
+
+.joe-ribbon {
+    text-decoration: none;
+    color: #FAFAFF;
+}
+
+.joe-ribbon:hover {
+    color: #FAFAFF;
+    text-decoration: underline;
+}
+
+.joe-ribbon-header {
+    text-decoration: none;
+    color: #F97C00;
+}
+
+.joe-ribbon-header:hover {
+    color: #F97C00;
+    text-decoration: underline;
+}
