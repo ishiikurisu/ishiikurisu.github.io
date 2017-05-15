@@ -1,0 +1,8 @@
+{
+	"ImportPath": "github.com/ishiikurisu/crisjr-eng-br",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v75",
+	"Packages": [
+		"./..."
+	]
+}
