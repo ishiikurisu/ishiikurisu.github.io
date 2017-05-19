@@ -33,3 +33,11 @@ func LoadFileWithoutArgs(writer io.Writer, path string) {
 func SayHello(writer io.Writer) {
     LoadFileWithoutArgs(writer, "assets/html/index.gohtml")
 }
+
+func TalkAboutOffice(writer io.Writer) {
+    LoadFileWithoutArgs(writer, "assets/html/office.gohtml")
+}
+
+func TalkAboutGarage(writer io.Writer) {
+    LoadFileWithoutArgs(writer, "assets/html/garage.gohtml")
+}
