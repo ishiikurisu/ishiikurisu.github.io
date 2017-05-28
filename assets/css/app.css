@@ -332,3 +332,13 @@ a.pure-button-primary {
     background-color: #100007;
     color: #fafaff;
 }
+
+.black-header-link {
+    color: #fafaff;
+    text-decoration: none;
+}
+
+.black-header-link:hover {
+    color: #fafaff;
+    text-decoration: underline;
+}
