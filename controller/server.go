@@ -48,7 +48,7 @@ func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
 
 // Shows a picture of a cat. WARNING: THIS IS EXPERIMENTAL
 func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
-    w.Header().Add("Access-Control-Allow-Origin", "")
+    w.Header().Add("Access-Control-Allow-Origin", "null")
     catDir := view.GetPwd() + "assets/neko"
     jpg, oops := model.RandomJpg(catDir)
     if oops != nil {
