@@ -22,6 +22,7 @@ func NewServer() Server {
     http.HandleFunc("/", server.SayHello)
     http.HandleFunc("/office", server.TalkAboutOffice)
     http.HandleFunc("/garage", server.TalkAboutGarage)
+    http.HandleFunc("/cat", server.DisplayCat)
     return server
 }
 
@@ -43,4 +44,14 @@ func (server *Server) TalkAboutOffice(w http.ResponseWriter, r *http.Request) {
 // Displays the garage page
 func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
     view.TalkAboutGarage(w)
+}
+
+// Shows a picture of a cat. WARNING: THIS IS EXPERIMENTAL
+func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
+    catDir := view.GetPwd() + "assets/neko"
+    jpg, oops := model.RandomJpg(catDir)
+    if oops != nil {
+        panic(oops)
+    }
+    w.Write([]byte(jpg))
 }
