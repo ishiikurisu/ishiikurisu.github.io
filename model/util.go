@@ -24,7 +24,8 @@ func RandomJpg(dir string) (string, error) {
 
     if len(files) > 0 {
         chosenFile := files[rand.Int() % len(files)]
-        cat = dir + chosenFile.Name()
+        // cat = dir + chosenFile.Name()
+        cat = "https://raw.githubusercontent.com/ishiikurisu/crisjr-eng-br/master/assets/neko/" + chosenFile.Name()
     } else {
         oops = errors.New("no cat")
     }
