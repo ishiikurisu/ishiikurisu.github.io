@@ -60,5 +60,5 @@ func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
 // Converts an EDF file to CSV.
 // TODO Implement this monster.
 func (server *Server) ConvertEdf2Csv(w http.ResponseWriter, r *http.Request) {
-    w.Write([]byte("NOT WORKING YET"))
+    model.ConvertEdf2Csv(w, r)
 }

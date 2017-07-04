@@ -6,6 +6,10 @@ import (
     "errors"
     "math/rand"
     "strings"
+    "github.com/ishiikurisu/edf"
+    "io"
+    "bytes"
+    "os"
 )
 
 // Tries to post a cat to a Rocket.Chat. Also, gives an URL with a picture from Neko Atsume.
@@ -40,4 +44,37 @@ func Check(e error) {
     if e != nil {
         panic(e)
     }
+}
+
+// Converts an EDF file to CSV
+func ConvertEdf2Csv(w http.ResponseWriter, r *http.Request) {
+    edfFile := "temp.edf"
+    csvFile := "output.csv"
+
+    // Reading
+    var buffer bytes.Buffer
+    // file, header, err := r.FormFile("edffile")
+    file, _, _ := r.FormFile("edffile")
+    defer file.Close()
+    // TODO Name csv file to this file name
+    // name := strings.Split(header.Filename, ".")
+    io.Copy(&buffer, file)
+    tempFile, _ := os.Create(edfFile)
+    tempFile.Write(buffer.Bytes())
+    tempFile.Close()
+
+    // Converting
+    // TODO Complete repo with EDF package dependency
+    edfContents := edf.ReadFile(edfFile)
+    tempFile, _ = os.Create(csvFile)
+    tempFile.WriteString(edfContents.WriteCSV())
+    tempFile.Close()
+
+    // Writting
+    w.Header().Set("Content-Disposition", "attachment; filename=" + csvFile)
+    w.Header().Set("Content-Type", r.Header.Get("Content-Type"))
+    io.Copy(w, r.Body)
+
+    // Cleaning memory
+    os.Remove(edfFile)
 }
