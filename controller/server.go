@@ -19,10 +19,15 @@ func NewServer() Server {
     server := Server {
         Port: model.GetPort(),
     }
+
+    // Main pages
     http.HandleFunc("/", server.SayHello)
     http.HandleFunc("/office", server.TalkAboutOffice)
     http.HandleFunc("/garage", server.TalkAboutGarage)
-    http.HandleFunc("/cat", server.DisplayCat)
+
+    // API functions
+    http.HandleFunc("/api/cat", server.DisplayCat)
+    http.HandleFunc("/api/edf/csv", server.ConvertEdf2Csv)
     return server
 }
 
@@ -48,11 +53,12 @@ func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
 
 // Shows a picture of a cat. WARNING: THIS IS EXPERIMENTAL
 func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
-    w.Header().Add("Access-Control-Allow-Origin", "null")
-    catDir := view.GetPwd() + "assets/neko"
-    jpg, oops := model.RandomJpg(catDir)
-    if oops != nil {
-        panic(oops)
-    }
+    jpg := model.DisplayCat(view.GetPwd())
     w.Write([]byte(jpg))
+}
+
+// Converts an EDF file to CSV.
+// TODO Implement this monster.
+func (server *Server) ConvertEdf2Csv(w http.ResponseWriter, r *http.Request) {
+    w.Write([]byte("NOT WORKING YET"))
 }
