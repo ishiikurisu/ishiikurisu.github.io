@@ -25,9 +25,9 @@ func NewServer() Server {
     http.HandleFunc("/office", server.TalkAboutOffice)
     http.HandleFunc("/garage", server.TalkAboutGarage)
 
-    // API functions
-    http.HandleFunc("/api/cat", server.DisplayCat)
-    http.HandleFunc("/api/edf/csv", server.ConvertEdf2Csv)
+    // TODO Add API functions
+    // http.HandleFunc("/api/cat", server.DisplayCat)
+    // http.HandleFunc("/api/edf/csv", server.ConvertEdf2Csv)
     return server
 }
 
