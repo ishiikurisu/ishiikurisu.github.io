@@ -34,11 +34,22 @@ func NewViewModel() *ViewModel {
 // Extracts the CSS path
 func loadCss() string {
     pwd := GetPwd()
-    css, err := ioutil.ReadFile(pwd + "assets/css/app.css")
+    css := []byte { }
+    files := []string {
+        "fontawesome.css",
+        "pure.css",
+        "app.css",
+    }
 
-    if err != nil {
-        fmt.Println(err)
-        css = []byte { }
+    for _, file := range files {
+        contents, err := ioutil.ReadFile(pwd + "assets/css/" + file)
+        if err != nil {
+            panic(err)
+        } else {
+            for _, content := range(contents) {
+                css = append(css, content)
+            }
+        }
     }
 
     return string(css)
