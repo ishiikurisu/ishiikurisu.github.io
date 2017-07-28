@@ -51,14 +51,14 @@ func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
     view.TalkAboutGarage(w)
 }
 
-// Shows a picture of a cat. WARNING: THIS IS EXPERIMENTAL
-func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
-    jpg := model.DisplayCat(view.GetPwd())
-    w.Write([]byte(jpg))
-}
-
-// Converts an EDF file to CSV.
-// TODO Implement this monster.
-func (server *Server) ConvertEdf2Csv(w http.ResponseWriter, r *http.Request) {
-    model.ConvertEdf2Csv(w, r)
-}
+// // Shows a picture of a cat. WARNING: THIS IS EXPERIMENTAL
+// func (server *Server) DisplayCat(w http.ResponseWriter, r *http.Request) {
+//     jpg := model.DisplayCat(view.GetPwd())
+//     w.Write([]byte(jpg))
+// }
+//
+// // Converts an EDF file to CSV.
+// // TODO Implement this monster.
+// func (server *Server) ConvertEdf2Csv(w http.ResponseWriter, r *http.Request) {
+//     model.ConvertEdf2Csv(w, r)
+// }
