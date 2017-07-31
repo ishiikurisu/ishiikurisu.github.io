@@ -36,7 +36,6 @@ func loadCss() string {
     pwd := GetPwd()
     css := []byte { }
     files := []string {
-        "fontawesome.css",
         "pure.css",
         "app.css",
     }
