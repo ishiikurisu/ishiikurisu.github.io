@@ -342,3 +342,8 @@ a.pure-button-primary {
     color: #fafaff;
     text-decoration: underline;
 }
+
+.ieee-img {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
