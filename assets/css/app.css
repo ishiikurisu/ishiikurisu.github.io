@@ -12,6 +12,11 @@ body {
     line-height: 1.7em;
     color: #100007;
     font-size: 13px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.pure-g p {
+    font-family: 'Rubik', sans-serif;
 }
 
 h1,
