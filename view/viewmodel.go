@@ -3,6 +3,7 @@ package view
 import "fmt"
 import "html/template"
 import "io/ioutil"
+import "strings"
 
 // This class will deal with creating our HTML pages by adding the necessary
 // assets (like CSS and Javascript) and facilitating the body customization.
@@ -22,36 +23,58 @@ type ViewModel struct {
 
 // Creates a new view model.
 func NewViewModel() *ViewModel {
+    cssFiles := []string {
+        "pure.css",
+        "app.css",
+    }
+    jsFiles := []string {
+        "app.js",
+    }
     vm := ViewModel {
-        Style: template.CSS(loadCss()),
+        Style: template.CSS(loadCss(cssFiles)),
         Footer: template.HTML(loadFooter()),
         Body: make(map[string]template.HTML),
-        Script: template.JS(loadJs()),
+        Script: template.JS(loadJs(jsFiles)),
     }
     return &vm
 }
 
-// Extracts the CSS path
-func loadCss() string {
-    pwd := GetPwd()
-    css := []byte { }
-    files := []string {
-        "pure.css",
-        "app.css",
+func GenerateViewModel(args map[string]string) *ViewModel {
+    vm := NewViewModel()
+
+    if value, ok := args["style"]; ok {
+        vm.Style = template.CSS(loadCss(strings.Split(value, " ")))
     }
 
+    if value, ok := args["script"]; ok {
+        vm.Script = template.JS(loadJs(strings.Split(value, " ")))
+    }
+
+    return vm
+}
+
+// Load many files to a single string
+func loadLot(src string, files []string) string {
+    outlet := []byte { }
+    pwd := GetPwd()
+
     for _, file := range files {
-        contents, err := ioutil.ReadFile(pwd + "assets/css/" + file)
+        contents, err := ioutil.ReadFile(pwd + src + file)
         if err != nil {
             panic(err)
         } else {
             for _, content := range(contents) {
-                css = append(css, content)
+                outlet = append(outlet, content)
             }
         }
     }
 
-    return string(css)
+    return string(outlet)
+}
+
+// Extracts the CSS path
+func loadCss(files []string) string {
+    return loadLot("assets/css/", files)
 }
 
 // Loads the footer HTML
@@ -68,16 +91,8 @@ func loadFooter() string {
 }
 
 // Loads the Javascript asset
-func loadJs() string {
-    pwd := GetPwd()
-    js, err := ioutil.ReadFile(pwd + "assets/js/app.js")
-
-    if err != nil {
-        fmt.Println(err)
-        js = []byte { }
-    }
-
-    return string(js)
+func loadJs(scripts []string) string {
+    return loadLot("assets/js/", scripts)
 }
 
 // TODO Create add body function

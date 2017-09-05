@@ -30,6 +30,17 @@ func LoadFileWithoutArgs(writer io.Writer, path string) {
     }
 }
 
+// Procedure to customize HTML files
+func LoadFileWithArgs(writer io.Writer, path string, args map[string]string) {
+    htmlPath := GetPwd() + path
+    templ, err := template.ParseFiles(htmlPath)
+    viewModel := GenerateViewModel(args)
+    err = templ.Execute(writer, viewModel)
+    if err != nil {
+        fmt.Printf("%#v\n", err)
+    }
+}
+
 func SayHello(writer io.Writer) {
     LoadFileWithoutArgs(writer, "assets/html/index.gohtml")
 }
@@ -43,5 +54,8 @@ func TalkAboutGarage(writer io.Writer) {
 }
 
 func TalkAboutGtd(writer io.Writer) {
-    LoadFileWithoutArgs(writer, "assets/html/persorg.gohtml")
+    LoadFileWithArgs(writer, "assets/html/persorg.gohtml", map[string]string {
+        "style": "reveal.css crisjr.css",
+        "script": "reveal.js",
+    })
 }
