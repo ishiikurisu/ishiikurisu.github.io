@@ -41,3 +41,7 @@ func TalkAboutOffice(writer io.Writer) {
 func TalkAboutGarage(writer io.Writer) {
     LoadFileWithoutArgs(writer, "assets/html/garage.gohtml")
 }
+
+func TalkAboutGtd(writer io.Writer) {
+    LoadFileWithoutArgs(writer, "assets/html/persorg.gohtml")
+}

@@ -24,6 +24,7 @@ func NewServer() Server {
     http.HandleFunc("/", server.SayHello)
     http.HandleFunc("/office", server.TalkAboutOffice)
     http.HandleFunc("/garage", server.TalkAboutGarage)
+    http.HandleFunc("/office/gtd", server.TalkAboutGtd)
 
     // TODO Add API functions
     return server
@@ -47,4 +48,9 @@ func (server *Server) TalkAboutOffice(w http.ResponseWriter, r *http.Request) {
 // Displays the garage page
 func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
     view.TalkAboutGarage(w)
+}
+
+// Starts the GTD presentation
+func (server *Server) TalkAboutGtd(w http.ResponseWriter, r *http.Request) {
+    view.TalkAboutGtd(w)
 }
