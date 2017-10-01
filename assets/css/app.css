@@ -142,6 +142,8 @@ a.pure-button-primary {
 
 .splash-container {
     background: #F97C00;
+    background-image: url(https://raw.githubusercontent.com/ishiikurisu/crisjr-eng-br/master/assets/dot.png);
+    background-repeat: repeat;
     z-index: 1;
     overflow: hidden;
     /* The following styles are required for the "scroll-over" effect */
