@@ -302,12 +302,12 @@ a.pure-button-primary {
  * CRIS STUFFs
  */
 .joe-link:link {
-    text-decoration: none;
+    text-decoration: underline;
     color: #100007;
 }
 
 .joe-link:visited {
-    text-decoration: none;
+    text-decoration: underline;
     color: #100007;
 }
 
@@ -317,7 +317,7 @@ a.pure-button-primary {
 }
 
 .joe-ribbon {
-    text-decoration: none;
+    text-decoration: underline;
     color: #FAFAFF;
 }
 
@@ -327,7 +327,7 @@ a.pure-button-primary {
 }
 
 .joe-ribbon-header {
-    text-decoration: none;
+    text-decoration: underline;
     color: #F97C00;
 }
 
@@ -343,7 +343,7 @@ a.pure-button-primary {
 
 .black-header-link {
     color: #fafaff;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .black-header-link:hover {
