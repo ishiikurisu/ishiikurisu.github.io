@@ -59,3 +59,11 @@ func TalkAboutGtd(writer io.Writer) {
         "script": "reveal.js",
     })
 }
+
+func DisplayError(writer io.Writer, oops error) {
+    if oops == nil {
+        fmt.Fprintf(writer, "Ok!\n")
+    } else {
+        fmt.Fprintf(writer, "%#v\n", oops)
+    }
+}

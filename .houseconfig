@@ -1,8 +1,0 @@
-{
-    "edit": {
-        "editor": "atom"
-    },
-    "build": {
-        "command": " go build github.com/ishiikurisu/crisjr-eng-br ; ./crisjr-eng-br"
-    }
-}
