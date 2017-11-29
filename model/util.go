@@ -25,14 +25,13 @@ func SendSimpleMail(recipient, message string) error {
                            os.Getenv("USERNAME"),
                            os.Getenv("PASSWORD"),
                            "smtp.gmail.com")
-    oops := smtp.SendMail("smtp.gmail.com:465",
+    oops := smtp.SendMail("smtp.gmail.com:587",
                           auth,
                           os.Getenv("USERNAME"),
                           []string{
                               recipient,
                           },
                           mail)
-    fmt.Printf("%v\n", string(mail))
 
     return oops
 }
