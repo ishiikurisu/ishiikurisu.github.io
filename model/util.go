@@ -2,7 +2,6 @@ package model
 
 import "os"
 import "net/smtp"
-import "fmt"
 
 // Gets the port for releasing the server
 func GetPort() string {
