@@ -27,7 +27,6 @@ func NewServer() Server {
     http.HandleFunc("/office/gtd", server.TalkAboutGtd)
     http.HandleFunc("/api/mail", server.SendMail)
 
-    // TODO Add API functions
     return server
 }
 

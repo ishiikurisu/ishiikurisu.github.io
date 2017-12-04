@@ -17,7 +17,7 @@ type ViewModel struct {
     // This mapping will relate the data produced by the model to the view.
     Body map[string]template.HTML
 
-    // TODO Add Javacript assets
+    // This is the Javascript code that will be ran in the browser.
     Script template.JS
 }
 
