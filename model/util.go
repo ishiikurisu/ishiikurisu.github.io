@@ -33,6 +33,7 @@ func SendSimpleMail(recipient, message string) error {
                         "-F", "subject='Automatic Email'",
                         "-F", text)
     output, oops := cmd.Output()
+    fmt.Printf("OUTPUT: %s\n", string(output))
     if string(output) == "Forbidden" {
         oops = errors.New(string(output))
     }
