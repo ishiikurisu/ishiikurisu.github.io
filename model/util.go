@@ -23,8 +23,7 @@ func SendSimpleMail(recipient, message string) error {
     cmd := exec.Command("curl",
                         "-X", "POST",
                         "-H", "Content-type: application/json",
-                        fmt.Sprintf("--data '{\"text\": \"De: %s\r\nMensagem: %s\"}''",
-                                    recipient, message),
+                        "--data", fmt.Sprintf("'{\"text\": \"De: %s\r\nMensagem: %s\"}''", recipient, message),
                         slackWebhook)
     buffer := bytes.NewBufferString("")
     cmd.Stderr = buffer
