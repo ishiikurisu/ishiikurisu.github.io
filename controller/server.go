@@ -25,6 +25,7 @@ func NewServer() Server {
     http.HandleFunc("/office", server.TalkAboutOffice)
     http.HandleFunc("/garage", server.TalkAboutGarage)
     http.HandleFunc("/office/gtd", server.TalkAboutGtd)
+    http.HandleFunc("/api/mail", server.SendMail)
 
     return server
 }
@@ -52,4 +53,12 @@ func (server *Server) TalkAboutGarage(w http.ResponseWriter, r *http.Request) {
 // Starts the GTD presentation
 func (server *Server) TalkAboutGtd(w http.ResponseWriter, r *http.Request) {
     view.TalkAboutGtd(w)
+}
+
+// Sends an e-mail to myself
+func (server *Server) SendMail(w http.ResponseWriter, r *http.Request) {
+    to := r.FormValue("to")
+    msg := r.FormValue("msg")
+    oops := model.SendSimpleMail(to, msg)
+    view.DisplayError(w, oops)
 }
