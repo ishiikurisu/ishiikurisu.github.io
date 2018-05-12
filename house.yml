@@ -1,6 +1,6 @@
 ---
 build:
-    local: false
+    local: true
     commands:
-        - go build github.com/ishiikurisu/crisjr-eng-br
+    - go run server.go
 ...
