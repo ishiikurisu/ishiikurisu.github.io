@@ -6,23 +6,22 @@
         <meta name="description" content="Personal website for Cristiano Silva Jr.">
         <title>Hello!</title>
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="icon" href="https://raw.githubusercontent.com/ishiikurisu/crisjr-eng-br/master/assets/logo.png">
+        <link rel="icon" href="https://raw.githubusercontent.com/ishiikurisu/ishiikurisu.github.io/master/assets/logo.png">
         <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
-        <style>
-            {{.Style}}
-        </style>
+        <link href="assets/css/pure.css" rel="stylesheet">
+        <link href="assets/css/app.css" rel="stylesheet">
     </head>
     <body>
 
         <div class="header">
             <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-                <a class="pure-menu-heading" href="/"><i class="fa fa-smile-o"></i>
+                <a class="pure-menu-heading" href="index.html"><i class="fa fa-smile-o"></i>
 					Cris Silva Jr.
 				</a>
 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="office" class="pure-menu-link">Escritório</a></li>
-                    <li class="pure-menu-item"><a href="garage" class="pure-menu-link">Oficina</a></li>
+                    <li class="pure-menu-item"><a href="office.html" class="pure-menu-link">Escritório</a></li>
+                    <li class="pure-menu-item"><a href="garage.html" class="pure-menu-link">Oficina</a></li>
                 </ul>
             </div>
         </div>
@@ -99,13 +98,27 @@
             </div>
 
             <div class="content">
-                {{.Footer}}
+                <h2 class="content-head is-center">Como você pode me encontrar?</h2>
+
+                <div class="pure-g">
+                    <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+                        <h4>Envie um e-mail!</h4>
+                        <p>
+                            Meu endereço de e-mail é <a class="joe-link" href="mailto:cristianoalvesjr@gmail.com">cristianoalvesjr@gmail.com</a>. Sinta-se à vontade para entrar em contato!
+                        </p>
+
+                        <h4>Mais informações...</h4>
+                        <p>
+                            Você pode me achar no <a class="joe-link" href="https://github.com/ishiikurisu">GitHub</a> e no <a class="joe-link" href="https://www.linkedin.com/in/cristiano-alves-da-silva-júnior-085391141/">LinkedIn</a>. Leia <a class="joe-link" href="http://stackoverflow.com/cv/crisjoejr">meu CV no Stack Overflow</a>.
+                        </p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
         <script type="text/javascript">
-            {{.Script}}
         </script>
     </body>
 </html>
