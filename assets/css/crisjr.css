@@ -336,7 +336,7 @@ body {
    ******************************************/
 
   .reveal .splash {
-      background: url(https://raw.githubusercontent.com/ishiikurisu/crisjr-eng-br/master/assets/dot.png);
+      background: url(../white-dot.png);
       background-repeat: repeat;
   }
 
