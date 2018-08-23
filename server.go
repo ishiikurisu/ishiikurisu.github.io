@@ -1,10 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 )
 
 func main() {
-	log.Fatal(http.ListenAndServe(":8000", http.FileServer(http.Dir("."))))
+	go func() {
+		log.Fatal(http.ListenAndServe(":8000", http.FileServer(http.Dir("."))))
+	}()
+	fmt.Scanf("\n")
 }

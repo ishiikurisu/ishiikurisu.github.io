@@ -28,6 +28,9 @@ h6,
 label {
     color: #34495e;
 }
+    .header-link:visited {
+        color: #34495e;
+    }
 
 .pure-img-responsive {
     max-width: 100%;

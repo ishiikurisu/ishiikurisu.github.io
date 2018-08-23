@@ -1,5 +1,5 @@
 ---
-build:
+execute:
     local: true
     commands:
     - go run server.go
