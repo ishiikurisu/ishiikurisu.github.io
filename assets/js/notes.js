@@ -13,9 +13,27 @@ function getUrlParameter(sParam) {
     }
 }
 
+function extract_body(html) {
+    var lines = html.split('\n');
+    var important_lines = [ ];
+    var body = '';
+
+    // extracting body lines
+    var inside = false;
+    for (var i = 0; i < lines.length; i++) {
+        var line = lines[i].trim();
+
+    }
+
+    // consolidating body lines
+
+
+    return body;
+}
+
 $(document).ready(function() {
     var notebook = getUrlParameter('notebook');
-    var url = 'http://gitcdn.xyz/repo/ishiikurisu/math-notes/master/' + notebook + '.html';
+    var url = 'https://raw.githubusercontent.com/ishiikurisu/math-notes/master/' + notebook + '.html'
     $.get({
         url: url,
         type: 'GET',
@@ -23,10 +41,9 @@ $(document).ready(function() {
 
         },
         success: function(data) {
-            var html = $(data);
-            var body = html.children("body");
+            var notes = $(extract_body(data));
             var content = $('.content');
-            content.html(html);
+            content.append(notes);
             MathJax.Hub.Typeset();
         }
     });
