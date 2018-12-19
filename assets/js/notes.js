@@ -22,10 +22,21 @@ function extract_body(html) {
     var inside = false;
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i].trim();
+        if (line === '<body>') {
+            inside = true;
+        } else if (line === '</body>') {
+            inside = false;
+        }
 
+        if (inside) {
+            important_lines.push(line);
+        }
     }
 
     // consolidating body lines
+    for (var i = 1; i < lines.length; i++) {
+        body += lines[i] + '\n';
+    }
 
 
     return body;
@@ -43,7 +54,7 @@ $(document).ready(function() {
         success: function(data) {
             var notes = $(extract_body(data));
             var content = $('.content');
-            content.append(notes);
+            content.html(notes);
             MathJax.Hub.Typeset();
         }
     });
