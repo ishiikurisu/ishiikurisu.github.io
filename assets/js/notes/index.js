@@ -17,23 +17,25 @@ function get(url, callback) {
 
 function draw(content, posts) {
     var limit = posts.length;
-    var outlet = `
-        <h2 class="content-head is-center">Todas as anotações</h2>
-        <ul>
-    `;
+    var outlet = "";
 
     for (var i = 0; i < limit; i++) {
         var post = posts[i];
         outlet += `
-            <li>
-                <a href="/notes/note.html?which=`+post.path+`&title=`+encodeURI(post.title)+`">
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <h3 class="content-subhead">
+                <a class="joe-ribbon-header"
+                   href="/notes/note.html?which=`+post.path+`&title=`+encodeURI(post.title)+`">
                     `+post.title+`
                 </a>
-            </li>
+            </h3>
+            <p>
+                `+post.description+`
+            </p>
+        </div>
         `;
     }
 
-    outlet += "</ul>";
     content.innerHTML = outlet;
 }
 
