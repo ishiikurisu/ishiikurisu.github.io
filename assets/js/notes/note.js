@@ -1,6 +1,5 @@
 var url = new URL(window.location.href);
 var which = url.searchParams.get("which");
-var title = decodeURI(url.searchParams.get("title"));
 var blog = new GithubBlog('ishiikurisu/blog-posts');
 
 blog.loadPost(`/${which}`, function(data) {
@@ -10,21 +9,12 @@ blog.loadPost(`/${which}`, function(data) {
         console.log(data.error);
         content.innerHTML = "<p>Erro inesperado :(</p><p>Tente novamente mais tarde</p>";
     } else {
-        var post = {
-            title: title,
-            body: data
-        };
-        var convert = which.substr(-2) === "md";
-        var outlet = `
-            <h2 class="content-head is-center">`+ post.title +`</h2>
-        `;
-        var body = post.body;
-        if (convert) {
+        var body = data;
+        if (which.substr(-2) === "md") {
             var md = new Remarkable();
             body = md.render(body);
         }
-        outlet += body;
-        content.innerHTML = outlet;
+        content.innerHTML = body;
         MathJax.Hub.Typeset();
     }
 });

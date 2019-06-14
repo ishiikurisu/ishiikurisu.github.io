@@ -3,7 +3,27 @@ blog.loadIndex(function(posts) {
     var content = document.getElementById('content');
 
     if (posts.error) {
-        content.innerHTML = "<p>Erro inesperadp :(</p><p>Tente novamente mais tarde</p>";
+        content.innerHTML = `
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <h3 class="content-subhead">
+                Erro inesperado :(
+            </h3>
+            <p>
+                Tente novamente mais tarde
+            </p>
+        </div>
+        `;
+    } else if (posts.length === 0) {
+        content.innerHTML = `
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+            <h3 class="content-subhead">
+                Está vazio por aqui...
+            </h3>
+            <p>
+                Ainda precisamos escrever mais textos antes de postar aqui. Continue de olho!
+            </p>
+        </div>
+        `;
     } else {
         var limit = posts.length;
         var outlet = "";
@@ -14,7 +34,7 @@ blog.loadIndex(function(posts) {
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                 <h3 class="content-subhead">
                     <a class="joe-ribbon-header"
-                       href="/notes/note.html?which=${post.path}&title=${encodeURI(post.title)}">
+                       href="/notes/note.html?which=${post.path}">
                         ${post.title}
                     </a>
                 </h3>
