@@ -1,6 +1,6 @@
 var url = new URL(window.location.href);
 var which = url.searchParams.get("which");
-var blog = new GithubBlog('ishiikurisu/blog-posts');
+var blog = new GithubBlog('ishiikurisu/notes');
 
 blog.loadPost(`/${which}`, function(data) {
     var content = document.getElementById('content');
@@ -13,6 +13,7 @@ blog.loadPost(`/${which}`, function(data) {
         if (which.substr(-2) === "md") {
             var md = new Remarkable();
             body = md.render(body);
+            console.log(body);
         }
         content.innerHTML = body;
         MathJax.Hub.Typeset();

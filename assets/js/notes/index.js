@@ -1,4 +1,4 @@
-var blog = new GithubBlog('ishiikurisu/blog-posts');
+var blog = new GithubBlog('ishiikurisu/notes');
 blog.loadIndex(function(posts) {
     var content = document.getElementById('content');
 
