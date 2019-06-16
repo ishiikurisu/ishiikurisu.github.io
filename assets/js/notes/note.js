@@ -13,7 +13,6 @@ blog.loadPost(`/${which}`, function(data) {
         if (which.substr(-2) === "md") {
             var md = new Remarkable();
             body = md.render(body);
-            console.log(body);
         }
         content.innerHTML = body;
         MathJax.Hub.Typeset();
