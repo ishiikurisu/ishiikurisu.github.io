@@ -349,3 +349,7 @@ a.pure-button-primary {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
+
+.monospaced {
+    font-family: monospace;
+}
