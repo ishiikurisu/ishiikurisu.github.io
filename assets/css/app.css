@@ -330,11 +330,6 @@ a.pure-button-primary {
     text-decoration: underline;
 }
 
-.manager-joe {
-    background-color: #100007;
-    color: #fafaff;
-}
-
 .black-header-link {
     color: #fafaff;
     text-decoration: underline;
@@ -345,11 +340,18 @@ a.pure-button-primary {
     text-decoration: underline;
 }
 
-.ieee-img {
-    -webkit-filter: invert(1);
-    filter: invert(1);
-}
-
 .monospaced {
     font-family: monospace;
+}
+
+.dark {
+    color: #FAFAFF;
+    background-color: #2E2E2E;
+}
+
+.dark a,
+.dark a:hover,
+.dark a:focus {
+    color: #FAFAFF;
+    text-decoration-color: #F97C00;
 }
