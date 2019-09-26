@@ -16,5 +16,12 @@ blog.loadPost(`/${which}`, function(data) {
         }
         content.innerHTML = body;
         MathJax.Hub.Typeset();
+
+        var dummyHtml = document.createElement('html');
+        dummyHtml.innerHTML = body;
+        var scripts = dummyHtml.getElementsByTagName('script');
+        if (scripts.length > 0) {
+            eval(scripts[0].innerHTML)();
+        }
     }
 });
