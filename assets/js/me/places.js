@@ -56,9 +56,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(mymap);
 
 // ADD PLACES
+var pin = L.AwesomeMarkers.icon({
+    icon: 'calendar-check',
+    markerColor: 'green',
+    iconColor: 'white',
+    prefix: 'fa'
+});
 var limit = places.length;
 for (var i = 0; i < places.length; i++) {
     var place = places[i];
-    var marker = L.marker([place.x, place.y]).addTo(mymap);
+    var marker = L.marker([place.x, place.y], {icon: pin});
+    marker.addTo(mymap);
     marker.bindPopup(place.popup);
 }
