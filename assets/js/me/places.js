@@ -2,10 +2,16 @@
 // TODO move that to another files
 let places = [
     {
+        x: -27.6032,
+        y: -48.4331,
+        popup:"Florianópolis, Santa Catarina",
+        status: "home"
+    },
+    {
         x: -15.7468,
         y: -47.8513,
-        popup:"Brasília, Distrito Federal (2019/05)",
-        status: "visited"
+        popup:"Brasília, Distrito Federal",
+        status: "home"
     },
     {
         x: -23.5630,
@@ -117,6 +123,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // ADD PLACES
 var pins = {
+    "home": L.AwesomeMarkers.icon({
+        icon: 'home',
+        markerColor: 'orange',
+        iconColor: 'white',
+        prefix: 'fa'
+    }),
     "visited": L.AwesomeMarkers.icon({
         icon: 'calendar-check',
         markerColor: 'green',
