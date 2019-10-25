@@ -2,117 +2,132 @@
 // TODO move that to another files
 let places = [
     {
-        x: -27.6032,
-        y: -48.4331,
+        lat: -27.6032,
+        lon: -48.4331,
         popup:"Florianópolis, Santa Catarina",
         status: "home"
     },
     {
-        x: -15.7468,
-        y: -47.8513,
+        lat: -15.7468,
+        lon: -47.8513,
         popup:"Brasília, Distrito Federal",
         status: "home"
     },
     {
-        x: -23.5630,
-        y: -46.6563,
+        lat: -23.5630,
+        lon: -46.6563,
         popup:"Sāo Paulo, Sāo Paulo (2016/02)",
         status: "visited"
     },
     {
-        x: -25.6950,
-        y: -54.4319,
+        lat: -25.6950,
+        lon: -54.4319,
         popup:"Foz do Iguaçú, Paraná (2016/10)",
         status: "visited"
     },
     {
-        x: -19.92296,
-        y: -43.94311,
+        lat: -19.92296,
+        lon: -43.94311,
         popup:"Belo Horizonte, Minas Gerais (2017/10)",
         status: "visited"
     },
     {
-        x: -22.9682,
-        y: -43.1779,
+        lat: -22.9682,
+        lon: -43.1779,
         popup:"Rio de Janeiro, Rio de Janeiro (2017/06)",
         status: "visited"
     },
     {
-        x: -17.7087,
-        y: -48.5924,
+        lat: -17.7087,
+        lon: -48.5924,
         popup:"Caldas Novas, Goiás (2018/03)",
         status: "visited"
     },
     {
-        x: -29.1062,
-        y: -51.5349,
+        lat: -29.1062,
+        lon: -51.5349,
         popup:"Bento Gonçalves, Rio Grande do Sul (2015/10)",
         status: "visited"
     },
     {
-        x: -12.9740,
-        y: -38.5104,
+        lat: -12.9740,
+        lon: -38.5104,
         popup:"Salvador, Bahia (2013/12)",
         status: "visited"
     },
     {
-        x: -7.1169,
-        y: -34.8087,
+        lat: -7.1169,
+        lon: -34.8087,
         popup:"Joāo Pessoa, Paraíba (2018/12)",
         status: "visited"
     },
     {
-        x: 36.7607,
-        y: 3.0676,
+        lat: 36.7607,
+        lon: 3.0676,
         popup:"الجزائر, الجزائر",
         status: "not visited"
     },
     {
-        x: 48.1707,
-        y: 11.5932,
+        lat: 48.1707,
+        lon: 11.5932,
         popup:"München, Deutschland",
         status: "not visited"
     },
     {
-        x: -34.9038420,
-        y: -56.1906122,
+        lat: -34.9038420,
+        lon: -56.1906122,
         popup:"Montevideo, Uruguay",
         status: "not visited"
     },
     {
-        x: 64.1538,
-        y: -21.9945,
+        lat: 64.1538,
+        lon: -21.9945,
         popup:"Reykjavík, Ísland",
         status: "not visited"
     },
     {
-        x: -36.8530,
-        y: 174.7192,
+        lat: -36.8530,
+        lon: 174.7192,
         popup:"Auckland, New Zealand",
         status: "not visited"
     },
     {
-        x: 35.6589796,
-        y: 139.6998435,
+        lat: -33.8453,
+        lon: 121.8278,
+        popup:"Pink Lake, Australia",
+        status: "not visited"
+    },
+    {
+        lat: 42.09107,
+        lon: -71.26408,
+        popup:"Foxboro, USA",
+        status: "not visited"
+    },
+    {
+        lat: 30.6626,
+        lon: 104.0633,
+        popup:"Chengdu, China",
+        status: "not visited"
+    },
+    {
+        lat: 47.5820,
+        lon: -52.6880,
+        popup:"St John, Canada",
+        status: "not visited"
+    },
+    {
+        lat: -3.7173,
+        lon: -38.4679,
+        popup:"Fortaleza, Ceará",
+        status: "not visited"
+    },
+    {
+        lat: 35.6589796,
+        lon: 139.6998435,
         popup:"東京、日本",
         status: "not visited"
     }
 ]
-
-// other places
-/*
-    pink beach, australia
-    foxboro, usa
-    san fran, usa
-    chengdu, china
-    danmark
-    fukuoka, hiroshima, osaka, kyoto
-    nintendo shop @ nyc, usa
-    fairbanks, alaska
-    st john, canada
-    fortaleza, ceará
-    Antarctica
-*/
 
 // MAPS
 var mymap = L.map('mapid').setView([-18.156, -42.296], 6);
@@ -145,7 +160,7 @@ var pins = {
 var limit = places.length;
 for (var i = 0; i < places.length; i++) {
     var place = places[i];
-    var marker = L.marker([place.x, place.y], {icon: pins[place.status]});
+    var marker = L.marker([place.lat, place.lon], {icon: pins[place.status]});
     marker.addTo(mymap);
     marker.bindPopup(place.popup);
 }
