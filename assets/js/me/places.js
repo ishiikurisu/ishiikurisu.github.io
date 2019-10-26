@@ -74,6 +74,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 55.68408,
+        lon: 12.59281,
+        popup:"København, Danmark",
+        status: "not visited"
+    },
+    {
         lat: -34.9038420,
         lon: -56.1906122,
         popup:"Montevideo, Uruguay",
@@ -119,6 +125,42 @@ let places = [
         lat: -3.7173,
         lon: -38.4679,
         popup:"Fortaleza, Ceará",
+        status: "not visited"
+    },
+    {
+        lat: -25.38457,
+        lon: -49.27614,
+        popup:"Curitiba, Paraná",
+        status: "visited"
+    },
+    {
+        lat: -26.9183,
+        lon: -49.0621,
+        popup:"Blumenau, Santa Catarina",
+        status: "not visited"
+    },
+    {
+        lat: 34.9913,
+        lon: 135.7263,
+        popup:"京都、日本",
+        status: "not visited"
+    },
+    {
+        lat: 34.6776,
+        lon: 135.4547,
+        popup:"大阪、日本",
+        status: "not visited"
+    },
+    {
+        lat: 33.6749,
+        lon: 130.3020,
+        popup:"福岡、日本",
+        status: "not visited"
+    },
+    {
+        lat: 34.39318,
+        lon: 132.45262,
+        popup:"広島、日本",
         status: "not visited"
     },
     {
