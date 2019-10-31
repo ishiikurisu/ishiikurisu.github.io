@@ -164,6 +164,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 36.56563,
+        lon: 136.65956,
+        popup:"金沢、日本",
+        status: "not visited"
+    },
+    {
         lat: 35.6589796,
         lon: 139.6998435,
         popup:"東京、日本",
