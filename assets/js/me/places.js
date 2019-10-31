@@ -14,6 +14,13 @@ let places = [
         status: "home"
     },
     {
+        lat: -10.4424,
+        lon: -49.1677,
+        popup:"Pium, Tocantins",
+        status: "visited"
+    },
+
+    {
         lat: -23.5630,
         lon: -46.6563,
         popup:"Sāo Paulo, Sāo Paulo (2016/02)",
