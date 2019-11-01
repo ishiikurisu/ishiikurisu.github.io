@@ -186,9 +186,9 @@ let places = [
 
 // MAPS
 var mymap = L.map('mapid').setView([-18.156, -42.296], 6);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tiles.mapbox.com/v3/pinterest.map-ho21rkos/{z}/{x}/{y}.jpg', {
 	maxZoom: 19,
-	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	attribution: '&copy;'
 }).addTo(mymap);
 
 // ADD PLACES
