@@ -177,6 +177,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 28.4868,
+        lon: 129.6414,
+        popup:"奄美、日本<br/>Antipode to Florianópolis, SC",
+        status: "not visited"
+    },
+    {
         lat: 35.6589796,
         lon: 139.6998435,
         popup:"東京、日本",
