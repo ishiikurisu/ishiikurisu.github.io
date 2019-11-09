@@ -57,8 +57,8 @@ let places = [
         status: "visited"
     },
     {
-        lat: -12.9740,
-        lon: -38.5104,
+        lat: -12.6367599,
+        lon: -38.1019828,
         popup:"Salvador, Bahia (2013/12)",
         status: "visited"
     },
