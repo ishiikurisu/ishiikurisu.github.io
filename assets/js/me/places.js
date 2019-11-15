@@ -183,6 +183,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 49.5605,
+        lon: -125.3973,
+        popup:"Mount Celeste, Canada",
+        status: "not visited"
+    },
+    {
         lat: 35.6589796,
         lon: 139.6998435,
         popup:"東京、日本",
