@@ -137,7 +137,7 @@ let places = [
     {
         lat: -25.38457,
         lon: -49.27614,
-        popup:"Curitiba, Paraná",
+        popup:"Curitiba, Paraná (2019/10)",
         status: "visited"
     },
     {
