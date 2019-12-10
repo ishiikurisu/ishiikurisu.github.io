@@ -189,6 +189,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: -77.033333,
+        lon: -126.10000,
+        popup:"Mount Sidley",
+        status: "not visited"
+    },
+    {
         lat: 35.6589796,
         lon: 139.6998435,
         popup:"東京、日本",
