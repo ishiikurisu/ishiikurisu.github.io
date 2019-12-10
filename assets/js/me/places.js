@@ -173,8 +173,8 @@ let places = [
     {
         lat: 36.56563,
         lon: 136.65956,
-        popup:"金沢、日本",
-        status: "not visited"
+        popup:"金沢、日本 (2019/12)",
+        status: "visited"
     },
     {
         lat: 28.4868,
@@ -195,10 +195,16 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 40.4898,
+        lon: -3.5747,
+        popup: "Madrid, España (2019/12)",
+        status: "visited"
+    },
+    {
         lat: 35.6589796,
         lon: 139.6998435,
-        popup:"東京、日本",
-        status: "not visited"
+        popup: '東京、日本 (<a href="/notes/note.html?which=tokyo-days.md">2019/12</a>)',
+        status: 'visited'
     }
 ]
 
