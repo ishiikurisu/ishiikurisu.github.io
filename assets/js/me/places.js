@@ -119,7 +119,7 @@ let places = [
     {
         lat: 30.6626,
         lon: 104.0633,
-        popup:"Chengdu, China",
+        popup:"成都, 中国",
         status: "not visited"
     },
     {
@@ -192,6 +192,12 @@ let places = [
         lat: -77.033333,
         lon: -126.10000,
         popup:"Mount Sidley",
+        status: "not visited"
+    },
+    {
+        lat: 59.4778,
+        lon: 24.8373,
+        popup: "Tallinn, Eesti",
         status: "not visited"
     },
     {
