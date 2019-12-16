@@ -195,9 +195,9 @@ let places = [
         status: "not visited"
     },
     {
-        lat: 40.4898,
-        lon: -3.5747,
-        popup: "Madrid, España (2019/12)",
+        lat: 36.2709,
+        lon: 136.8986,
+        popup: "白川、日本 (2019年12月15日)",
         status: "visited"
     },
     {
