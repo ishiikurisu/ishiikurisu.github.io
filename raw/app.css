@@ -22,7 +22,10 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6,
+label {
     color: #F97C00;
 }
     .header-link:visited {
@@ -52,6 +55,44 @@ h4 {
 }
 
 
+
+/*
+ * -- PURE FORM STYLES --
+ * Style the form inputs and labels
+ */
+.pure-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+/*
+ * -- PURE BUTTON STYLES --
+ * I want my pure-button elements to look a little different
+ */
+.pure-button {
+    background-color: #083D77;
+    color: white;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+a.pure-button-primary {
+    background: white;
+    color: #1f8dd6;
+    border-radius: 5px;
+    font-size: 120%;
+}
+
+
 /*
  * -- MENU STYLES --
  * I want to customize how my .pure-menu looks at the top of the page
@@ -76,6 +117,14 @@ h4 {
     color: white;
     font-weight: 400;
     font-size: 120%;
+}
+
+.home-menu .pure-menu-selected a {
+    color: white;
+}
+
+.pure-menu-link .pure-menu-selected a {
+    color: white;
 }
 
 .home-menu a {
@@ -278,6 +327,16 @@ h4 {
 
 .joe-ribbon-header:hover {
     color: #F97C00;
+    text-decoration: underline;
+}
+
+.black-header-link {
+    color: #fafaff;
+    text-decoration: underline;
+}
+
+.black-header-link:hover {
+    color: #fafaff;
     text-decoration: underline;
 }
 
