@@ -173,7 +173,7 @@ let places = [
     {
         lat: 36.56563,
         lon: 136.65956,
-        popup:"金沢、日本 (2019/12)",
+        popup: '金沢、日本 (<a href="/notes/note.html?which=kanazawa-days.md">2019/12</a>)',
         status: "visited"
     },
     {
