@@ -129,12 +129,6 @@ let places = [
         status: "not visited"
     },
     {
-        lat: -3.7173,
-        lon: -38.4679,
-        popup:"Fortaleza, Ceará",
-        status: "not visited"
-    },
-    {
         lat: -25.38457,
         lon: -49.27614,
         popup:"Curitiba, Paraná (2019/10)",
