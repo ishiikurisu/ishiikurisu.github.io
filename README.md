@@ -1,6 +1,18 @@
 Cris Silva Jr.'s personal website
 =================================
 
-[My site](http://www.crisjr.eng.br)'s code. 
+[My site](http://www.crisjr.eng.br)'s code.
 
-I am using [Yahoo's Pure framework](https://purecss.io/) to organize the site. Icons provided by [Font Awesome](https://fontawesome.io/icons/) and [The Noun Project](https://thenounproject.com/).
+Grateful for the following open source projects to make this possible:
+
+- [Yahoo's Pure](https://purecss.io/)
+- [Font Awesome](https://fontawesome.io/icons/)
+- [The Noun Project](https://thenounproject.com/)
+- [MathJax](https://www.mathjax.org/)
+- [reveal.js](https://revealjs.com/)
+- [Leaflet](https://leafletjs.com/)
+- [Awesome Markers](https://github.com/lvoogdt/Leaflet.awesome-markers)
+- [PurgeCSS](https://purgecss.com/)
+- [GitHub](https://github.com)
+
+
