@@ -141,6 +141,24 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 37.5262,
+        lon: 126.9580,
+        popup:"서울, 한국",
+        status: "not visited"
+    },
+    {
+        lat: 38.7074,
+        lon: -9.1344,
+        popup:"Lisboa, Portugal",
+        status: "not visited"
+    },
+    {
+        lat: 53.3450,
+        lon: -6.3172,
+        popup:"Dublin, Ireland",
+        status: "not visited"
+    },
+    {
         lat: 34.9913,
         lon: 135.7263,
         popup:"京都、日本",
@@ -212,7 +230,7 @@ let places = [
 var mymap = L.map('mapid').setView([-18.156, -42.296], 6);
 L.tileLayer('https://{s}.tiles.mapbox.com/v3/pinterest.map-ho21rkos/{z}/{x}/{y}.jpg', {
 	maxZoom: 19,
-	attribution: '&copy;'
+	attribution: 'Leaflet &copy;'
 }).addTo(mymap);
 
 // ADD PLACES
