@@ -213,6 +213,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 39.8490,
+        lon: 116.2129,
+        popup: "北京, 中国",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
