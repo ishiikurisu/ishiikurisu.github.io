@@ -5,7 +5,7 @@ Cris Silva Jr.'s personal website
 
 Grateful for the following open source projects that make it possible:
 
-- [Yahoo's Pure](https://purecss.io/)
+- [mini.css](https://minicss.org/docs)
 - [Font Awesome](https://fontawesome.io/icons/)
 - [The Noun Project](https://thenounproject.com/)
 - [MathJax](https://www.mathjax.org/)
