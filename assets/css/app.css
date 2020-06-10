@@ -296,3 +296,7 @@ h4 {
     color: #FAFAFF;
     text-decoration-color: #F97C00;
 }
+
+table {
+    width: 90%;
+}
