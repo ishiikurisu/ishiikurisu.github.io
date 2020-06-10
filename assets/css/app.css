@@ -15,6 +15,7 @@ body {
     color: #100007;
     font-size: 13px;
     font-family: var(--rubik);
+    background-color: var(--black);
 }
 
 .pure-g p {
@@ -80,11 +81,17 @@ a:visited {
 }
 
 /*
- * HEADER
+ * HEADER	
  */
 header {
     background-color: var(--black);
     color: var(--white);
+    z-index: 99;
+    position: fixed !important;
+    border: none;
+    font-family: var(--rubik);
+    width: 100%;
+    font-size: 90%;
 }
 
 header .logo {
@@ -102,7 +109,31 @@ header .button {
  * SPLASH
  */
 .splash {
-    position: absolute;
-    height: 60%;
+    position: fixed;
+    height: 85%;
     width: 100%;
+    background: url(/assets/dot.png);
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
+
+.splash-head {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--black);
+    border: 3px solid var(--black);
+    background-color: var(--orange);
+    margin-top: 50%;
+    text-transform: uppercase;
+}
+
+.content-wrapper {
+    min-height: 15%;
+    z-index: 2;
+    top: 85%;
+    background: white;
+    position: absolute;
+}
+
