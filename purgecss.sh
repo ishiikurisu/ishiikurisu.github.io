@@ -1,1 +1,0 @@
-purgecss --css assets/css/app.css assets/css/awesome-markers.css assets/css/gtd.css assets/css/latex.css assets/css/places.css assets/css/pure.css assets/css/reveal.css --content index.html me/index.html me/places.html notes/index.html notes/note.html util/index.html util/gtd.html assets/js/notes/note.js assets/js/me/places.js --out build
