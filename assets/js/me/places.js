@@ -87,6 +87,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 59.3247,
+        lon: 18.1074,
+        popup: "Stockholm, Sverige",
+        status: "not visited"
+    },
+    {
         lat: -34.9038420,
         lon: -56.1906122,
         popup:"Montevideo, Uruguay",
