@@ -48,6 +48,8 @@ function saveChecklists(checklists) {
 // # API MANAGEMENT #
 // ##################
 
+/* FPCL TO CHECKLISTS */
+
 /**
  * Converts list of checklists as JS objects into a *.fpcl string
  * @param checklists array of checklists
@@ -59,53 +61,88 @@ function checklistsToFpcl(checklists) {
     for (var i = 0; i < checklists.length; i++) {
         var checklist = checklists[i];
         var items = checklist.items;
-        var box = `${checklist.title}\n`;
+        var box = `# ${checklist.title}\n\n`;
         for (var j = 0; j < items.length; j++) {
             var item = items[j];
-            var checked = (item.done)? "+" : "-";
+            var checked = `- [${(item.done)? "x" : " "}] `
             box += `${checked}${item.title}\n`
         }
-        box += "\n";
         outlet += box;
     }
 
     return outlet;
 }
 
+/* FPCL TO CHECKLISTS */
+
+function identifyKind(line) {
+    let kinds = [
+        {
+            name: 'title',
+            regex: /^#(.*)/
+        },
+        {
+            name: 'todo',
+            regex: /^- \[[\sx]\](.*)/
+        },
+        {
+            name: 'empty',
+            regex: /^(?![\s\S])/
+        }
+    ];
+    var noKind = kinds.length;
+    for (var i = 0; i < noKind; i++) {
+        var kind = kinds[i];
+        var match = line.match(kind.regex);
+        if (match) {
+            return kind.name;
+        }
+    }
+    return null;
+}
+
 /**
- * Converts a *.fpcl string into an array of checklists
- * @param fpcl string representation of a checklist
+ * Converts a markdown string into an array of checklists
+ * @param md string representation of a checklist
  * @returns array of checklists
  */
-function fpclToChecklists(fpcl) {
+function fpclToChecklists(md) {
     var checklists = [];
-    var lines = fpcl.split('\n');
+    var lines = md.split('\n');
     var currentChecklist = null;
     var currentState = "title";
 
     for (var i = 0; i < lines.length; i++) {
         var line = lines[i];
+        currentState = identifyKind(line);
+
         switch (currentState) {
-            case "title":
-                currentChecklist = {
-                    "title": line,
-                    "items": []
-                }
-                currentState = "item";
-                break;
-            case "item":
-                if (line.length === 0) {
+            case 'title':
+                if (currentChecklist !== null) {
                     checklists.push(currentChecklist);
-                    currentState = "title";
-                } else {
-                    var item = {
-                        "title": line.substring(1),
-                        "done": line[0] === '+'
-                    }
-                    currentChecklist.items.push(item);
                 }
+
+                currentChecklist = {
+                    'title': line.substring(1).trim(),
+                    'items': []
+                };
                 break;
+
+            case 'todo':
+                currentChecklist.items.push({
+                    'title': line.substring('- [ ]'.length).trim(),
+                    'done': !!line.match(/^- \[x\]/)
+                });
+                break;
+
+            default:
+                // empty line
+                continue;
         }
+    }
+
+    if (currentState !== 'title') {
+        checklists.push(currentChecklist);
     }
 
     return checklists;
