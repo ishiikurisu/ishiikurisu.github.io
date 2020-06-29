@@ -219,6 +219,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: -44.9964,
+        lon: 168.6649,
+        popup: "Queenstown, New Zealand",
+        status: "not visited"
+    },
+    {
         lat: 39.8490,
         lon: 116.2129,
         popup: "北京, 中国",
