@@ -31,7 +31,9 @@ function navMenuButtonCallback() {
 function setup() {
     var textarea = document.getElementById('checklistform');
     var checklists = loadChecklists(checklists);
-    textarea.value = checklistsToFpcl(checklists);
+    var fpcl = checklistsToFpcl(checklists);
+    console.log(fpcl);
+    textarea.value = fpcl;
 }
 
 /**

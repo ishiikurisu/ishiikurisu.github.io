@@ -57,6 +57,7 @@ function saveChecklists(checklists) {
  */
 function checklistsToFpcl(checklists) {
     var outlet = "";
+    var listBreak = "";
 
     for (var i = 0; i < checklists.length; i++) {
         var checklist = checklists[i];
@@ -64,10 +65,19 @@ function checklistsToFpcl(checklists) {
         var box = `# ${checklist.title}\n\n`;
         for (var j = 0; j < items.length; j++) {
             var item = items[j];
-            var checked = `- [${(item.done)? "x" : " "}] `
-            box += `${checked}${item.title}\n`
+            switch (item.kind) {
+                case "note":
+                    box += `${item.title}\n`
+                    break;
+                case "todo":
+                    var checked = `- [${(item.done)? "x" : " "}] `;
+                    box += `${checked}${item.title}\n`;
+                    break;
+
+            }
         }
-        outlet += box;
+        outlet += `${listBreak}${box}`;
+        listBreak = "\n";
     }
 
     return outlet;
@@ -98,7 +108,7 @@ function identifyKind(line) {
             return kind.name;
         }
     }
-    return null;
+    return 'note';
 }
 
 /**
@@ -130,8 +140,16 @@ function fpclToChecklists(md) {
 
             case 'todo':
                 currentChecklist.items.push({
+                    'kind': 'todo',
                     'title': line.substring('- [ ]'.length).trim(),
                     'done': !!line.match(/^- \[x\]/)
+                });
+                break;
+
+            case 'note':
+                currentChecklist.items.push({
+                    'kind': 'note',
+                    'title': line.trim()
                 });
                 break;
 
