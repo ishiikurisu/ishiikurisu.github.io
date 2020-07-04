@@ -231,6 +231,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 35.12550,
+        lon: 138.26819,
+        popup: "天狗岳、日本",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
