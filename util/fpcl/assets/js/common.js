@@ -26,9 +26,11 @@ function createDummyChecklist() {
         "title": "Your first checklist",
         "items": [
             {
+                "kind": "todo",
                 "title": "To do item",
                 "done": false
             }, {
+                "kind": "todo",
                 "title": "Done item",
                 "done": true
             }
@@ -67,7 +69,7 @@ function checklistsToFpcl(checklists) {
             var item = items[j];
             switch (item.kind) {
                 case "note":
-                    box += `${item.title}\n`
+                    box += `${item.title}\n`;
                     break;
                 case "todo":
                     var checked = `- [${(item.done)? "x" : " "}] `;
