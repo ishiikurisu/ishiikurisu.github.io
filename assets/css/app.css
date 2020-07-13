@@ -66,3 +66,27 @@ html, body {
     font-size: 2em;
     margin: 0.5em;
 }
+
+/*
+ * NAVIGATION
+ */
+.navigation {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brand {
+    border-style: solid;
+    border-color: var(--orange);
+    padding: 0.5em;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.brand:hover,
+.brand:visited {
+    color: var(--white);
+    text-decoration: none;
+}
