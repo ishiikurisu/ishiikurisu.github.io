@@ -1,4 +1,14 @@
+body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
 #mapid {
-    height: 42em;
+    height: 95%;
     position: relative;
+}
+
+#content {
+    height: 100%;
 }
