@@ -10,9 +10,12 @@ function saveCallback() {
     var rawChecklists = textarea.value;
     var checklists = fpclToChecklists(rawChecklists);
     saveChecklists(checklists);
-    console.log(rawChecklists);
-    maybeCloudSaveChecklists(rawChecklists);
-    window.location = "./";
+    maybeCloudSaveChecklists(rawChecklists, function(response) {
+        if (!!response.error) {
+            alert(response.error);
+        }
+        window.location = "./";    
+    });
 }
 
 /**
