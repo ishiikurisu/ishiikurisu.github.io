@@ -237,6 +237,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 52.08931,
+        lon: 5.11139,
+        popup: "Utrecht, Nederland",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
