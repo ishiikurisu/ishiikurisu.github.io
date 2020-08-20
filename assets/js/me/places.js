@@ -243,6 +243,24 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 52.50612,
+        lon: 13.43790,
+        popup: "Berlin, Deutschland",
+        status: "not visited"
+    },
+    {
+        lat: 47.36706,
+        lon: 8.54085,
+        popup: "Zürich, Schweiz",
+        status: "not visited"
+    },
+    {
+        lat: 35.15964,
+        lon: 129.12676,
+        popup: "부산, 한국",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
