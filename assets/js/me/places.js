@@ -261,6 +261,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 43.65609,
+        lon: -79.38019,
+        popup: "Toronto, Canada",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
