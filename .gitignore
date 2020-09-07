@@ -16,3 +16,4 @@
 
 # Trying to config Unicorn
 /shared/*
+.DS_Store
