@@ -1,0 +1,64 @@
+digraph {
+    tetsushi [label="Tetsushi"]
+    kinoko [label="Kinoko"]
+    fazu [label="Fazu Minato"]
+    clarence [label="Clarence"]
+    kyoukai [label="Kyoukai"]
+    gaja [label="Gaja"]
+    pium [label="Pium"]
+    minas [label="Minas"]
+    kolejxjo [label="Kolejĵo"]
+    parokjo [label="Parokjo"]
+    rejkjo [label="Rejkjo"]
+
+    // minami
+    tetsushi -> kinoko [label="ore"]
+    kinoko -> tetsushi [label="food"]
+    kinoko -> fazu [label="craft"]
+    kinoko -> fazu [label="maps"]
+    kinoko -> fazu [label="bank"]
+    kinoko -> minas [label="craft"]
+    kinoko -> minas [label="maps"]
+
+    // orisha
+    fazu -> clarence [label="magic"]
+    fazu -> clarence [label="food"]
+    fazu -> kinoko [label="magic"]
+    fazu -> kinoko [label="treasures"]
+    fazu -> kyoukai [label="treasures"]
+    fazu -> kyoukai [label="food"]
+    fazu -> pium [label="magic"]
+    fazu -> pium [label="ore"]
+    clarence -> fazu [label="treasures"]
+    clarence -> fazu [label="ore"]
+    kyoukai -> fazu [label="bank"]
+    kyoukai -> gaja [label="bank"]
+
+    // horagawa
+    pium -> fazu [label="treasures"]
+    pium -> parokjo [label="maps"]
+    pium -> parokjo [label="ore"]
+    pium -> parokjo [label="magic"]
+    pium -> parokjo [label="bank"]
+    minas -> pium [label="food"]
+    minas -> pium [label="ore"]
+    minas -> pium [label="maps"]
+    minas -> pium [label="taxes"]
+    minas -> kinoko [label="猫"]
+    minas -> rejkjo [label="magic"]
+    minas -> rejkjo [label="craft"]
+
+    // roga
+    parokjo -> pium [label="treasures"]
+    parokjo -> rejkjo [label="treasures"]
+    parokjo -> kolejxjo [label="ore"]
+    kolejxjo -> parokjo [label="treasures"]
+
+    // gaja
+    gaja -> kyoukai [label="treasures"]
+
+    // feröo
+    rejkjo -> parokjo [label="maps"]
+    rejkjo -> parokjo [label="ore"]
+    rejkjo -> minas [label="maps"]
+}

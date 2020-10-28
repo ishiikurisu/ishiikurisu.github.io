@@ -1,0 +1,61 @@
+graph {
+    // cities
+    tetsushi [label="Tetsushi"]
+    kinoko [label="Kinoko"]
+    fazu [label="Fazu Harbour"]
+    clarence [label="Clarence"]
+    kyoukai [label="Kyoukai"]
+    gaja [label="Gaja"]
+    pium [label="Pium"]
+    minas [label="Minas"]
+    kolejxjo [label="Kolejĵo"]
+    parokjo [label="Parokjo"]
+    rejkjo [label="Rejkjo"]
+    ilago [label="Ilago"]
+    alexa [label="Alexa"]
+
+    // places of interest
+    sheep_island [label="Sheep islands"]
+    ghosts_islands [label="Ghosts' islands"]
+    temple_island [label="Temple island"]
+    keble_planes [label="Keble plane"]
+    unnamed_valley [label="Unnamed valley"]
+    alexa_mountain [label="Alexa mountain"]
+    japi_valley [label="Japi valley"]
+    god_domain [label="God's domain"]
+    roga_bay [label="Roga bay"]
+    horagawa_bay [label="Horagawa bay"]
+    keble_forest [label="Keble Forest"]
+    roga_river [label="Roga river"]
+    portal_island [label="Portal Island"]
+
+    // connections
+    tetsushi -- kinoko
+    kinoko -- fazu
+    kinoko -- sheep_island
+    kinoko -- ghosts_islands
+    sheep_island -- fazu
+    sheep_island -- horagawa_bay
+    ghosts_islands -- temple_island
+    fazu -- clarence
+    clarence -- kyoukai
+    clarence -- keble_planes
+    keble_planes -- unnamed_valley
+    unnamed_valley -- pium
+    kyoukai -- god_domain
+    god_domain -- japi_valley
+    japi_valley -- gaja
+    japi_valley -- kolejxjo
+    kolejxjo -- roga_river
+    roga_river -- parokjo
+    parokjo -- roga_bay
+    roga_bay -- rejkjo
+    rejkjo -- ilago
+    parokjo -- keble_forest
+    keble_forest -- pium
+    pium -- alexa_mountain
+    pium -- horagawa_bay
+    alexa_mountain -- minas
+    alexa_mountain -- alexa
+    tetsushi -- portal_island
+}
