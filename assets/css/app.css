@@ -301,3 +301,9 @@ h5 {
 table {
     width: 90%;
 }
+
+.card {
+    border-style: solid;
+    border-color: #F97C00;
+    border-width: 1px;
+}
