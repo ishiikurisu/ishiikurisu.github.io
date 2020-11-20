@@ -5,7 +5,7 @@ let places = [
         lat: -27.6032,
         lon: -48.4331,
         popup:"Florianópolis, Santa Catarina",
-        status: "home"
+        status: "visited"
     },
     {
         lat: -15.7468,
