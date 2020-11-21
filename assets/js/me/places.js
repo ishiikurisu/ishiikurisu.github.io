@@ -5,7 +5,7 @@ let places = [
         lat: -27.6032,
         lon: -48.4331,
         popup:"Florianópolis, Santa Catarina",
-        status: "home"
+        status: "visited"
     },
     {
         lat: -15.7468,
@@ -282,7 +282,7 @@ let places = [
 
 // MAPS
 var mymap = L.map('mapid').setView([-18.156, -42.296], 6);
-L.tileLayer('https://{s}.tiles.mapbox.com/v3/pinterest.map-ho21rkos/{z}/{x}/{y}.jpg', {
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: 'Leaflet &copy;'
 }).addTo(mymap);
