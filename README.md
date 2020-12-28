@@ -15,3 +15,4 @@ Grateful for the following open source projects that make it possible:
 - [PurgeCSS](https://purgecss.com/)
 - [GitHub](https://github.com)
 - [qrcode.js](https://davidshimjs.github.io/qrcodejs/)
+- [webassembly](https://webassembly.org/)
