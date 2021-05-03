@@ -1,5 +1,5 @@
 // PLACES DATA
-// TODO move that to another files
+// TODO move that to another file
 let places = [
     {
         lat: -27.6032,
@@ -264,6 +264,12 @@ let places = [
         lat: 43.65609,
         lon: -79.38019,
         popup: "Toronto, Canada",
+        status: "not visited"
+    },
+    {
+        lat: 14.6121,
+        lon: 121.0253,
+        popup: "Maynila, Pilipinas",
         status: "not visited"
     },
     {
