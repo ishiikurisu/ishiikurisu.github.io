@@ -288,6 +288,10 @@ h4 {
 .dark {
     color: #FAFAFF;
     background-color: #2E2E2E;
+}
+
+.dark-dotted {
+    background-color: #2E2E2E;
     background-image: url(https://raw.githubusercontent.com/ishiikurisu/crisjr-eng-br/master/assets/background.png);
     background-repeat: repeat;
 }
