@@ -34,7 +34,7 @@ blog.loadIndex(function(posts) {
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                 <h3 class="content-subhead">
                     <a class="joe-ribbon-header"
-                       href="/notes/note.html?which=${post.path}">
+                       href="/notes/note.html?which=${post.path}&title=${encodeURIComponent(post.title)}">
                         ${post.title}
                     </a>
                 </h3>

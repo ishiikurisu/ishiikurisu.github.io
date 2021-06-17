@@ -1,9 +1,10 @@
 var url = new URL(window.location.href);
 var which = url.searchParams.get("which");
+var title = decodeURIComponent(url.searchParams.get("title"));
 var blog = new GithubBlog('ishiikurisu/notes');
 
 function renderCsv(csv) {
-    var html = `<table class="pure-table pure-table-bordered">`;
+    var html = `<h1>${title}</h1><table class="pure-table pure-table-bordered">`;
     var rows = csv.split("\n");
     var rowCount = rows.length;
     var firstLine = true;
@@ -65,12 +66,5 @@ blog.loadPost(`/${which}`, function(data) {
         }
         content.innerHTML = body;
         MathJax.Hub.Typeset();
-
-        var dummyHtml = document.createElement('html');
-        dummyHtml.innerHTML = body;
-        var scripts = dummyHtml.getElementsByTagName('script');
-        if (scripts.length > 0) {
-            eval(scripts[0].innerHTML)();
-        }
     }
 });
