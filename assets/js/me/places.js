@@ -273,6 +273,12 @@ let places = [
         status: "not visited"
     },
     {
+        lat: 47.14870,
+        lon: 7.26418,
+        popup: "Biel, Schweiz",
+        status: "not visited"
+    },
+    {
         lat: 36.2709,
         lon: 136.8986,
         popup: "白川、日本 (2019年12月15日)",
